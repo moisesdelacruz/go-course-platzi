@@ -19,6 +19,18 @@ func main() {
 	// get floats
 	f32, f64 := getFloat()
 	fmt.Println(f32, f64)
+
+	// string utf-8
+	stringUTF8 := getUnicode()
+	fmt.Println("Cadena UTF-8: ", stringUTF8)
+
+	// string index ASCII
+	fmt.Println("hello"[0])
+	// string index string
+	fmt.Println(string("hello"[0]))
+	// len
+	fmt.Println(len("Hello"))
+
 }
 
 func getName() string {
@@ -39,4 +51,8 @@ func getFloat() (float32, float64) {
 
 func sum(a int, b int) int {
 	return a + b
+}
+
+func getUnicode() string {
+	return "ハローワールド"
 }
