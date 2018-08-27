@@ -38,6 +38,9 @@ func main() {
 
 	// if test
 	ifTest()
+
+	// for Test
+	forTest()
 }
 
 func getName() string {
@@ -95,5 +98,29 @@ func ifTest() {
 		fmt.Println("Entro...")
 	} else {
 		fmt.Println("No entro...")
+	}
+}
+
+func forTest() {
+	// traditional for
+	for i := 0; i < 5; i++ {
+		fmt.Println("[FOR] ", i)
+	}
+
+	// only conditional
+	c := 100
+	for c > 0 {
+		c -= 10
+		fmt.Printf("[FOR] solo con una condicion de %d > 0 \n", c)
+	}
+
+	// for braak
+	num := 1000
+	for {
+		num--
+		if num == 0 {
+			fmt.Println("Termina el for 'infinito' con 'num': ", num)
+			break
+		}
 	}
 }
