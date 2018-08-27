@@ -5,8 +5,8 @@ import "fmt"
 const helloWorld string = "Hola %s, bienvenido\n"
 
 func main() {
-	name := getName()
-	fmt.Printf(helloWorld, name)
+	// name := getName()
+	// fmt.Printf(helloWorld, name)
 
 	// get ints
 	a, b, c := getVariables()
@@ -36,6 +36,8 @@ func main() {
 	// Slice
 	getSlice()
 
+	// if test
+	ifTest()
 }
 
 func getName() string {
@@ -75,4 +77,23 @@ func getSlice() {
 	var slice1 []string
 	slice1 = append(slice1, "Selena Gomez", "Demi Lovato", "Christina Aguilera")
 	fmt.Println(slice1)
+}
+
+func ifTest() {
+	var number int
+	number = 0
+	fmt.Print("Ingresa un numero del 1 al 10: ")
+	fmt.Scanf("%d", &number)
+
+	if number%2 == 0 {
+		fmt.Printf("El numero %d es par\n", number)
+	} else {
+		fmt.Printf("El numero %d es impar\n", number)
+	}
+
+	if number := 2; number == 2 {
+		fmt.Println("Entro...")
+	} else {
+		fmt.Println("No entro...")
+	}
 }
