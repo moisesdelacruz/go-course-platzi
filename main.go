@@ -31,6 +31,11 @@ func main() {
 	// len
 	fmt.Println(len("Hello"))
 
+	// Array
+	getArray()
+	// Slice
+	getSlice()
+
 }
 
 func getName() string {
@@ -55,4 +60,19 @@ func sum(a int, b int) int {
 
 func getUnicode() string {
 	return "ハローワールド"
+}
+
+func getArray() {
+	var arr1 [2]string
+	arr2 := [3]int{1, 2, 4}
+	arr1[0] = "First"
+	arr1[1] = "Last"
+	fmt.Println(arr1)
+	fmt.Println(arr2)
+}
+
+func getSlice() {
+	var slice1 []string
+	slice1 = append(slice1, "Selena Gomez", "Demi Lovato", "Christina Aguilera")
+	fmt.Println(slice1)
 }
