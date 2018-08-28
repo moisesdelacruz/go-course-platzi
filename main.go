@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 const helloWorld string = "Hola %s, bienvenido\n"
 
@@ -41,6 +44,9 @@ func main() {
 
 	// for Test
 	forTest()
+
+	// strings2
+	strings2()
 }
 
 func getName() string {
@@ -123,4 +129,12 @@ func forTest() {
 			break
 		}
 	}
+}
+
+func strings2() {
+	text := "Hello world, Hello Platzi, Hello Go"
+	fmt.Println(strings.ToUpper(text))
+	fmt.Println(strings.ToLower(text))
+	fmt.Println(strings.Replace(text, "Hello", "Hola", -1))
+	fmt.Println(strings.Split(text, ", "))
 }
