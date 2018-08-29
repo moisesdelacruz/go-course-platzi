@@ -7,8 +7,18 @@ import (
 	// "github.com/moisesdelacruz/gocourse/name"
 	// "github.com/moisesdelacruz/gocourse/numbers"
 	// "github.com/moisesdelacruz/gocourse/structs"
-	"github.com/moisesdelacruz/gocourse/maps"
 )
+
+// PlatziCourse estructura de curso
+type PlatziCourse struct {
+	Name   string
+	Slug   string
+	Skills []string
+}
+
+// type PlatziCareer struct {
+// 	PlatziCourse
+// }
 
 const helloWorld string = "Hola %s, bienvenido\n"
 
@@ -56,11 +66,25 @@ func main() {
 	// // switch
 	// flow.SwitchTest()
 
-	// maps
-	var name string
-	fmt.Print("Name: ")
-	fmt.Scanf("%s", &name)
-	fmt.Println("Age: ", maps.GetMap(name))
+	// // maps
+	// var name string
+	// fmt.Print("Name: ")
+	// fmt.Scanf("%s", &name)
+	// fmt.Println("Age: ", maps.GetMap(name))
+
+	platziCourse := PlatziCourse{
+		Name:   "Go",
+		Slug:   "go",
+		Skills: []string{"Backend"},
+	}
+	fmt.Println(platziCourse)
+
+	// instance with 'new'
+	platziCourse2 := new(PlatziCourse)
+	platziCourse2.Name = "Python"
+	platziCourse2.Slug = strings.ToLower(platziCourse2.Name)
+	platziCourse2.Skills = []string{"Backend"}
+	fmt.Println(platziCourse2)
 }
 
 func strings2() {
