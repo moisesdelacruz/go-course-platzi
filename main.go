@@ -16,6 +16,11 @@ type PlatziCourse struct {
 	Skills []string
 }
 
+// Subscribe ...
+func (p PlatziCourse) Subscribe(name string) {
+	fmt.Printf("La Persona %s se a registrado a el curso de %s\n", name, p.Name)
+}
+
 // type PlatziCareer struct {
 // 	PlatziCourse
 // }
@@ -77,6 +82,7 @@ func main() {
 		Slug:   "go",
 		Skills: []string{"Backend"},
 	}
+	platziCourse.Subscribe("Moises")
 	fmt.Println(platziCourse)
 
 	// instance with 'new'
@@ -84,6 +90,9 @@ func main() {
 	platziCourse2.Name = "Python"
 	platziCourse2.Slug = strings.ToLower(platziCourse2.Name)
 	platziCourse2.Skills = []string{"Backend"}
+
+	platziCourse2.Subscribe("Moises")
+
 	fmt.Println(platziCourse2)
 }
 
