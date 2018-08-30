@@ -3,27 +3,12 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	"github.com/moisesdelacruz/gocourse/structs"
 	// "github.com/moisesdelacruz/gocourse/flow"
 	// "github.com/moisesdelacruz/gocourse/name"
 	// "github.com/moisesdelacruz/gocourse/numbers"
-	// "github.com/moisesdelacruz/gocourse/structs"
 )
-
-// PlatziCourse estructura de curso
-type PlatziCourse struct {
-	Name   string
-	Slug   string
-	Skills []string
-}
-
-// Subscribe ...
-func (p PlatziCourse) Subscribe(name string) {
-	fmt.Printf("La Persona %s se a registrado a el curso de %s\n", name, p.Name)
-}
-
-// type PlatziCareer struct {
-// 	PlatziCourse
-// }
 
 const helloWorld string = "Hola %s, bienvenido\n"
 
@@ -77,23 +62,7 @@ func main() {
 	// fmt.Scanf("%s", &name)
 	// fmt.Println("Age: ", maps.GetMap(name))
 
-	platziCourse := PlatziCourse{
-		Name:   "Go",
-		Slug:   "go",
-		Skills: []string{"Backend"},
-	}
-	platziCourse.Subscribe("Moises")
-	fmt.Println(platziCourse)
-
-	// instance with 'new'
-	platziCourse2 := new(PlatziCourse)
-	platziCourse2.Name = "Python"
-	platziCourse2.Slug = strings.ToLower(platziCourse2.Name)
-	platziCourse2.Skills = []string{"Backend"}
-
-	platziCourse2.Subscribe("Moises")
-
-	fmt.Println(platziCourse2)
+	structs.InterfaceTest()
 }
 
 func strings2() {

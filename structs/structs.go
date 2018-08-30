@@ -18,3 +18,25 @@ func GetSlice() {
 	slice1 = append(slice1, "Selena Gomez", "Demi Lovato", "Christina Aguilera")
 	fmt.Println(slice1)
 }
+
+// PlatziCourse estructura de curso
+type PlatziCourse struct {
+	Name   string
+	Slug   string
+	Skills []string
+}
+
+// Subscribe subscribe to course
+func (p PlatziCourse) Subscribe(name string) {
+	fmt.Printf("La Persona %s se a registrado a el curso de %s\n", name, p.Name)
+}
+
+// PlatziCareer estructura de career que toma los metodos de PlatziCourse
+type PlatziCareer struct {
+	PlatziCourse
+}
+
+// Subscribe subscribe to course
+func (p PlatziCareer) Subscribe(name string) {
+	fmt.Printf("La Persona %s se a registrado a la carrera de %s\n", name, p.Name)
+}
