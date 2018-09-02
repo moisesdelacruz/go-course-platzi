@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/moisesdelacruz/gocourse/structs"
+	"github.com/moisesdelacruz/gocourse/numbers"
 	// "github.com/moisesdelacruz/gocourse/flow"
 	// "github.com/moisesdelacruz/gocourse/name"
-	// "github.com/moisesdelacruz/gocourse/numbers"
 )
 
 const helloWorld string = "Hola %s, bienvenido\n"
@@ -20,9 +19,12 @@ func main() {
 	// a, b, c := numbers.GetVariables()
 	// fmt.Println(a, b, c)
 	//
-	// // sum ints numbers
-	// number := numbers.Sum(45, 55)
-	// fmt.Println(number)
+	// sum ints numbers
+	number, err := numbers.Sum(45, 55)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(number)
 	//
 	// // get floats
 	// f32, f64 := numbers.GetFloat()
@@ -62,7 +64,7 @@ func main() {
 	// fmt.Scanf("%s", &name)
 	// fmt.Println("Age: ", maps.GetMap(name))
 
-	structs.InterfaceTest()
+	// structs.InterfaceTest()
 }
 
 func strings2() {
